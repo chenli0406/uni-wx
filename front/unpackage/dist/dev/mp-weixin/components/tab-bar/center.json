@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wfalls-flow": "/components/wfalls-flow/wfalls-flow"
+  }
+}

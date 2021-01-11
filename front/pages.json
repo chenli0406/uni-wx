@@ -1,0 +1,73 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+
+	],
+	"subPackages": [{
+		"root": "pages/pagesA",
+		"pages": [{
+			"path": "details/details",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}]
+	}, {
+		"root": "pages/pagesB",
+		"pages": [{
+                    "path" : "feedback/feedback",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": true
+                }
+                
+                }
+            ]
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF",
+		"navigationStyle": "custom"
+	}
+	// "easycom":{
+	// 	"autoscan": true,
+	// 	"custom": {
+	// 	  // "van-(.*)":"@/wxcomponents/vant/dist/$1/index.vue",
+	// 		   "^uni-(.*)":"@components/uni-$1/uni-$1.vue"
+	// 	}
+	// },
+	// "tabBar": {
+	// 	"color": "#007AFF",
+	// 	"selectedColor": "#3cc51f",
+	// 	"borderStyle": "white",
+	// 	"backgroundColor": "#FFFFFF",
+	// 	"list": [{
+	// 			"pagePath": "pages/index/index",
+	// 			"iconPath": "./static/img/index.png",
+	// 			"selectedIconPath": "./static/img/index-active.png",
+	// 			"text": ""
+	// 		},
+	// 		{
+	// 			"pagePath": "pages/my/my",
+	// 			"iconPath": "./static/img/my.png",
+	// 			"selectedIconPath": "./static/img/my-active.png",
+	// 			"text": ""
+	// 		}
+	// 	]
+	// }
+}

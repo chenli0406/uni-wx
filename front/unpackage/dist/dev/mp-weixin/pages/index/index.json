@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "tab-home": "/components/tab-bar/home",
+    "tab-center": "/components/tab-bar/center",
+    "tab-my": "/components/tab-bar/my"
+  }
+}
