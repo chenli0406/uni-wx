@@ -1,6 +1,10 @@
 {
   "component": true,
   "usingComponents": {
+    "cl-list-item": "/colorui/cl-uni/components/cl-list-item/cl-list-item",
+    "cl-image": "/colorui/cl-uni/components/cl-image/cl-image",
+    "cl-text": "/colorui/cl-uni/components/cl-text/cl-text",
+    "cl-button": "/colorui/cl-uni/components/cl-button/cl-button",
     "cu-swiper": "/colorui/components/cu-swiper",
     "cu-tablist": "/colorui/components/cu-tablist"
   }

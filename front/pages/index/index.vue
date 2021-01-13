@@ -85,8 +85,7 @@
 		},
 		// 监听推荐组件触底（在组件中这个不执行）
 		onReachBottom(){
-		 console.log("111")
-			this.$refs.center.onBottom()
+			 // this.$refs.center.onBottom()
 		},
 		methods: {
 			// 切换组件
@@ -108,6 +107,9 @@
 			onPullDownRefresh() {
 				if(this.show_index+1 == 2){
 					this.$refs.center.onRefresh()
+				}
+				if(this.show_index+1 == 1){
+					this.$refs.home.getList()
 				}
 				setTimeout(function() {
 					uni.showToast({

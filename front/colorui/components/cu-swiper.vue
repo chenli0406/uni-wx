@@ -30,7 +30,6 @@
 		methods: {
 			getBannerList(){
 				this.$api.getBanner().then((res)=>{
-					  console.log(res);
 						this.swiperList = res.data.data
 				})
 			},

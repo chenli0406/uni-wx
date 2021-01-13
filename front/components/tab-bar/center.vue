@@ -1,6 +1,6 @@
 <template>
 	<view class="container">
-		 <scroll-view scroll-y bindscrolltolower="bottom" lower-threshold="400" class="DrawerPage" :class="showDrawerModal == true?'show':''">
+		 <scroll-view scroll-y @scrolltolower="onBottom" lower-threshold="80" class="DrawerPage" :class="showDrawerModal == true?'show':''">
 			<cu-custom bgColor="bg-gradual-blue" :isBack="true">
 				<block slot="content">列表</block>
 			</cu-custom>
@@ -19,7 +19,43 @@
 					<image :src="detailsData.image"></image>
 					<view class="content">
 						<view class="desc">
-							<view class="text-content">{{detailsData.content}}</view>
+						<view class="text-content">{{detailsData.content}}</view>
+						<view class="like">
+							<view>
+								<text class="cuIcon-likefill"></text>
+								<text style="padding: 0 4rpx;">{{detailsData.like}}</text>
+							</view>	
+							<view style="padding-left: 20rpx;">
+								<text class="cuIcon-myfill"></text>
+								<text style="padding: 0 4rpx;">{{detailsData.fan}}</text>
+							</view>
+						</view>
+						<view class="center-box">
+							<view class="box">
+								<text>昵称：</text>
+								<text>{{detailsData.nickname}}</text>
+							</view>
+							<view class="box">
+								<text>手机号：</text>
+								<text>{{detailsData.phone}}</text>
+							</view>
+							<view class="box">
+								<text>性别：</text>
+								<text>{{detailsData.sex}}</text>
+							</view>
+							<view class="box">
+								<text>年龄：</text>
+								<text>{{detailsData.age}}</text>
+							</view>
+							<view class="box">
+								<text>职业：</text>
+								<text>{{detailsData.profession}}</text>
+							</view>
+							<view class="box">
+								<text>星座：</text>
+								<text>{{detailsData.constellation}}</text>
+							</view>
+						</view>
 						<view class='flex flex-wrap'>
 							<view  style="padding-right: 20rpx;" v-for="(item,index) in tag" :key="index">
 								<view class='cu-tag light radius bg-blue'>{{item}}</view>
@@ -71,11 +107,7 @@
 						}
 				})
 			},
-			bottom(){
-				console.log("1244445")
-			},
 			getLoadNum(num) {
-				console.log('共加载了'+ num)
 			 !this.isNewRenderDone && uni.hideLoading()
 				this.isNewRenderDone = true
 			},
@@ -121,9 +153,6 @@
 			hideModal(){
 				this.showDrawerModal = false;
 			},
-			bottom(){
-				console.log("122435")
-			}
 		},
 	}
 </script>
@@ -139,17 +168,17 @@
 		position: fixed;
 		width: 100vw;
 		left: 0vw;
-		height: 100vh;
+		top: 0;
+		bottom:120rpx;
 		background-color: #f1f1f1;
 		transition: all 0.4s;
-		padding-bottom: 120rpx;
-		overflow-y: auto;
 	}
 	.DrawerPage.show {
 		transform: scale(0.9, 0.9);
 		left: 85vw;
 		box-shadow: 0 0 60upx rgba(0, 0, 0, 0.2);
 		transform-origin: 0;
+		overflow-y: hidden;
 	}
 	
 	.DrawerWindow {
@@ -163,7 +192,6 @@
 		transition: all 0.4s;
 		padding: 60upx 0;
 	  padding-bottom: 120rpx;
-		overflow-y: hidden;
 	}
 	
 	.DrawerWindow.show {
@@ -173,7 +201,7 @@
 	}
 	
 	.DrawerClose {
-		position: absolute;
+		position: fixed;
 		width: 40vw;
 		height: 100vh;
 		right: 0;
@@ -234,5 +262,20 @@
 	
 	.DrawerPage .cu-bar.tabbar .action {
 		flex: initial;
+	}
+	.like{
+		display: flex;
+		justify-content: flex-end;
+		font-size: 14px;
+		color: #888;
+		margin: 10rpx 0;
+	}
+	.center-box{
+		font-size: 14px;
+		color: #888;
+		 margin: 10rpx 0;
+		 .box{
+			 padding: 6rpx 0;
+		 }
 	}
 </style>

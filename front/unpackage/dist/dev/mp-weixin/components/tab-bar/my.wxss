@@ -11,6 +11,7 @@
  *
  * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
  */
+/* COOL-UNI 颜色变量 */
 /* 颜色变量 */
 /* 行为相关颜色 */
 /* 文字基本颜色 */
@@ -24,6 +25,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+/* 默认主题色 */
 .fixed {
   position: fixed;
   z-index: 99;
@@ -41,10 +43,26 @@
 }
 .cu-dialog {
   width: 60%;
-  border-radius: 20rpx;
   padding: 20rpx 0;
+}
+.cu-dialog .cu-item {
+  background-color: transparent;
 }
 .cu-bar .content {
   width: auto;
+}
+.avatar {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-size: 20rpx;
+  margin-bottom: 30rpx;
 }
 

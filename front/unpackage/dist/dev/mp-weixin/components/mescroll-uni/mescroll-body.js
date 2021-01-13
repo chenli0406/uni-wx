@@ -1,9 +1,9 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["components/mescroll-uni/mescroll-body"],{
 
 /***/ 48:
-/*!**************************************************************!*\
-  !*** E:/test-deom/components/mescroll-uni/mescroll-body.vue ***!
-  \**************************************************************/
+/*!*****************************************************************!*\
+  !*** E:/uni-wx/front/components/mescroll-uni/mescroll-body.vue ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -14,7 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _mescroll_body_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _mescroll_body_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 /* harmony import */ var _mescroll_body_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mescroll-body.vue?vue&type=style&index=0&lang=css& */ 56);
 /* harmony import */ var _D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js */ 10);
-/* harmony import */ var _wxs_wxs_wxs_vue_type_custom_index_0_blockType_script_issuerPath_E_3A_5Ctest_deom_5Ccomponents_5Cmescroll_uni_5Cmescroll_body_vue_module_wxsBiz_lang_wxs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./wxs/wxs.wxs?vue&type=custom&index=0&blockType=script&issuerPath=E%3A%5Ctest-deom%5Ccomponents%5Cmescroll-uni%5Cmescroll-body.vue&module=wxsBiz&lang=wxs */ 58);
+/* harmony import */ var _wxs_wxs_wxs_vue_type_custom_index_0_blockType_script_issuerPath_E_3A_5Cuni_wx_5Cfront_5Ccomponents_5Cmescroll_uni_5Cmescroll_body_vue_module_wxsBiz_lang_wxs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./wxs/wxs.wxs?vue&type=custom&index=0&blockType=script&issuerPath=E%3A%5Cuni-wx%5Cfront%5Ccomponents%5Cmescroll-uni%5Cmescroll-body.vue&module=wxsBiz&lang=wxs */ 58);
 
 var renderjs
 
@@ -39,7 +39,7 @@ var component = Object(_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue
 
 /* custom blocks */
 
-if (typeof _wxs_wxs_wxs_vue_type_custom_index_0_blockType_script_issuerPath_E_3A_5Ctest_deom_5Ccomponents_5Cmescroll_uni_5Cmescroll_body_vue_module_wxsBiz_lang_wxs__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_wxs_wxs_wxs_vue_type_custom_index_0_blockType_script_issuerPath_E_3A_5Ctest_deom_5Ccomponents_5Cmescroll_uni_5Cmescroll_body_vue_module_wxsBiz_lang_wxs__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
+if (typeof _wxs_wxs_wxs_vue_type_custom_index_0_blockType_script_issuerPath_E_3A_5Cuni_wx_5Cfront_5Ccomponents_5Cmescroll_uni_5Cmescroll_body_vue_module_wxsBiz_lang_wxs__WEBPACK_IMPORTED_MODULE_4__["default"] === 'function') Object(_wxs_wxs_wxs_vue_type_custom_index_0_blockType_script_issuerPath_E_3A_5Cuni_wx_5Cfront_5Ccomponents_5Cmescroll_uni_5Cmescroll_body_vue_module_wxsBiz_lang_wxs__WEBPACK_IMPORTED_MODULE_4__["default"])(component)
 
 component.options.__file = "components/mescroll-uni/mescroll-body.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -47,9 +47,9 @@ component.options.__file = "components/mescroll-uni/mescroll-body.vue"
 /***/ }),
 
 /***/ 49:
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** E:/test-deom/components/mescroll-uni/mescroll-body.vue?vue&type=template&id=5eb4c084&filter-modules=eyJ3eHNCaXoiOnsidHlwZSI6InNjcmlwdCIsImNvbnRlbnQiOiIiLCJzdGFydCI6MzIxNywiYXR0cnMiOnsic3JjIjoiLi93eHMvd3hzLnd4cyIsIm1vZHVsZSI6Ind4c0JpeiIsImxhbmciOiJ3eHMifSwiZW5kIjozMjE3fSwicmVuZGVyQml6Ijp7InR5cGUiOiJyZW5kZXJqcyIsImNvbnRlbnQiOiIiLCJzdGFydCI6MzM1MCwiYXR0cnMiOnsibW9kdWxlIjoicmVuZGVyQml6IiwibGFuZyI6ImpzIn0sImVuZCI6MzQ0M319& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** E:/uni-wx/front/components/mescroll-uni/mescroll-body.vue?vue&type=template&id=5eb4c084&filter-modules=eyJ3eHNCaXoiOnsidHlwZSI6InNjcmlwdCIsImNvbnRlbnQiOiIiLCJzdGFydCI6MzIxNywiYXR0cnMiOnsic3JjIjoiLi93eHMvd3hzLnd4cyIsIm1vZHVsZSI6Ind4c0JpeiIsImxhbmciOiJ3eHMifSwiZW5kIjozMjE3fSwicmVuZGVyQml6Ijp7InR5cGUiOiJyZW5kZXJqcyIsImNvbnRlbnQiOiIiLCJzdGFydCI6MzM1MCwiYXR0cnMiOnsibW9kdWxlIjoicmVuZGVyQml6IiwibGFuZyI6ImpzIn0sImVuZCI6MzQ0M319& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -69,9 +69,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 50:
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/test-deom/components/mescroll-uni/mescroll-body.vue?vue&type=template&id=5eb4c084&filter-modules=eyJ3eHNCaXoiOnsidHlwZSI6InNjcmlwdCIsImNvbnRlbnQiOiIiLCJzdGFydCI6MzIxNywiYXR0cnMiOnsic3JjIjoiLi93eHMvd3hzLnd4cyIsIm1vZHVsZSI6Ind4c0JpeiIsImxhbmciOiJ3eHMifSwiZW5kIjozMjE3fSwicmVuZGVyQml6Ijp7InR5cGUiOiJyZW5kZXJqcyIsImNvbnRlbnQiOiIiLCJzdGFydCI6MzM1MCwiYXR0cnMiOnsibW9kdWxlIjoicmVuZGVyQml6IiwibGFuZyI6ImpzIn0sImVuZCI6MzQ0M319& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/uni-wx/front/components/mescroll-uni/mescroll-body.vue?vue&type=template&id=5eb4c084&filter-modules=eyJ3eHNCaXoiOnsidHlwZSI6InNjcmlwdCIsImNvbnRlbnQiOiIiLCJzdGFydCI6MzIxNywiYXR0cnMiOnsic3JjIjoiLi93eHMvd3hzLnd4cyIsIm1vZHVsZSI6Ind4c0JpeiIsImxhbmciOiJ3eHMifSwiZW5kIjozMjE3fSwicmVuZGVyQml6Ijp7InR5cGUiOiJyZW5kZXJqcyIsImNvbnRlbnQiOiIiLCJzdGFydCI6MzM1MCwiYXR0cnMiOnsibW9kdWxlIjoicmVuZGVyQml6IiwibGFuZyI6ImpzIn0sImVuZCI6MzQ0M319& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -96,9 +96,9 @@ render._withStripped = true
 /***/ }),
 
 /***/ 51:
-/*!***************************************************************************************!*\
-  !*** E:/test-deom/components/mescroll-uni/mescroll-body.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************/
+/*!******************************************************************************************!*\
+  !*** E:/uni-wx/front/components/mescroll-uni/mescroll-body.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -112,9 +112,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 52:
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/test-deom/components/mescroll-uni/mescroll-body.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/uni-wx/front/components/mescroll-uni/mescroll-body.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -305,7 +305,7 @@ var MescrollEmpty = function MescrollEmpty() {__webpack_require__.e(/*! require.
     bottombar: { // 底部是否偏移TabBar的高度(默认仅在H5端的tab页生效)
       type: Boolean, default: true }, sticky: Boolean // 是否支持sticky,默认false; 当值配置true时,需避免在mescroll-body标签前面加非定位的元素,否则下拉区域无法会隐藏
   }, computed: { // mescroll最小高度,默认windowHeight,使列表不满屏仍可下拉
-    minHeight: function minHeight() {return this.toPx(this.height || '100%') + 'px';}, // 下拉布局往下偏移的距离 (px)
+    minHeight: function minHeight() {return this.toPx(this.height || '30%') + 'px';}, // 下拉布局往下偏移的距离 (px)
     numTop: function numTop() {return this.toPx(this.top);}, padTop: function padTop() {return this.numTop + 'px';}, // 上拉布局往上偏移 (px)
     numBottom: function numBottom() {return this.toPx(this.bottom);}, padBottom: function padBottom() {return this.numBottom + 'px';}, // 是否为重置下拉的状态
     isDownReset: function isDownReset() {return this.downLoadType === 3 || this.downLoadType === 4;}, // 过渡
@@ -464,9 +464,9 @@ var MescrollEmpty = function MescrollEmpty() {__webpack_require__.e(/*! require.
 /***/ }),
 
 /***/ 56:
-/*!***********************************************************************************************!*\
-  !*** E:/test-deom/components/mescroll-uni/mescroll-body.vue?vue&type=style&index=0&lang=css& ***!
-  \***********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** E:/uni-wx/front/components/mescroll-uni/mescroll-body.vue?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -480,9 +480,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 57:
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/test-deom/components/mescroll-uni/mescroll-body.vue?vue&type=style&index=0&lang=css& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/uni-wx/front/components/mescroll-uni/mescroll-body.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -493,23 +493,23 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 58:
-/*!****************************************************************************************************************************************************************************************************!*\
-  !*** E:/test-deom/components/mescroll-uni/wxs/wxs.wxs?vue&type=custom&index=0&blockType=script&issuerPath=E%3A%5Ctest-deom%5Ccomponents%5Cmescroll-uni%5Cmescroll-body.vue&module=wxsBiz&lang=wxs ***!
-  \****************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** E:/uni-wx/front/components/mescroll-uni/wxs/wxs.wxs?vue&type=custom&index=0&blockType=script&issuerPath=E%3A%5Cuni-wx%5Cfront%5Ccomponents%5Cmescroll-uni%5Cmescroll-body.vue&module=wxsBiz&lang=wxs ***!
+  \************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_filter_loader_index_js_wxs_wxs_vue_type_custom_index_0_blockType_script_issuerPath_E_3A_5Ctest_deom_5Ccomponents_5Cmescroll_uni_5Cmescroll_body_vue_module_wxsBiz_lang_wxs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-filter-loader!./wxs.wxs?vue&type=custom&index=0&blockType=script&issuerPath=E%3A%5Ctest-deom%5Ccomponents%5Cmescroll-uni%5Cmescroll-body.vue&module=wxsBiz&lang=wxs */ 59);
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_filter_loader_index_js_wxs_wxs_vue_type_custom_index_0_blockType_script_issuerPath_E_3A_5Ctest_deom_5Ccomponents_5Cmescroll_uni_5Cmescroll_body_vue_module_wxsBiz_lang_wxs__WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_filter_loader_index_js_wxs_wxs_vue_type_custom_index_0_blockType_script_issuerPath_E_3A_5Cuni_wx_5Cfront_5Ccomponents_5Cmescroll_uni_5Cmescroll_body_vue_module_wxsBiz_lang_wxs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-filter-loader!./wxs.wxs?vue&type=custom&index=0&blockType=script&issuerPath=E%3A%5Cuni-wx%5Cfront%5Ccomponents%5Cmescroll-uni%5Cmescroll-body.vue&module=wxsBiz&lang=wxs */ 59);
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_D_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_uni_filter_loader_index_js_wxs_wxs_vue_type_custom_index_0_blockType_script_issuerPath_E_3A_5Cuni_wx_5Cfront_5Ccomponents_5Cmescroll_uni_5Cmescroll_body_vue_module_wxsBiz_lang_wxs__WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
 /***/ 59:
-/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-filter-loader!E:/test-deom/components/mescroll-uni/wxs/wxs.wxs?vue&type=custom&index=0&blockType=script&issuerPath=E%3A%5Ctest-deom%5Ccomponents%5Cmescroll-uni%5Cmescroll-body.vue&module=wxsBiz&lang=wxs ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-filter-loader!E:/uni-wx/front/components/mescroll-uni/wxs/wxs.wxs?vue&type=custom&index=0&blockType=script&issuerPath=E%3A%5Cuni-wx%5Cfront%5Ccomponents%5Cmescroll-uni%5Cmescroll-body.vue&module=wxsBiz&lang=wxs ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

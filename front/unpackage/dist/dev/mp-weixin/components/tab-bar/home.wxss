@@ -11,6 +11,7 @@
  *
  * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
  */
+/* COOL-UNI 颜色变量 */
 /* 颜色变量 */
 /* 行为相关颜色 */
 /* 文字基本颜色 */
@@ -24,11 +25,15 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+/* 默认主题色 */
 .main_box {
   width: 100vw;
   position: fixed;
   padding-bottom: 120rpx;
   box-sizing: border-box;
+}
+page {
+  height: 100%;
 }
 .content {
   padding: 1.2rem;
@@ -46,5 +51,26 @@
   -webkit-box-pack: center;
   -webkit-justify-content: center;
           justify-content: center;
+}
+.item2 {
+  width: 100vw;
+  padding: 0 20rpx;
+  height: 60vh;
+  padding-bottom: 120rpx;
+  overflow-y: scroll;
+}
+.item2 .cl-list-item {
+  border-radius: 20rpx;
+  margin: 20rpx 0;
+  padding: 20rpx;
+}
+.item2 .cl-list-item .image {
+  border-radius: 14rpx;
+}
+ .cl-list-item__content {
+  padding: 0;
+}
+ .cl-list-item__container {
+  padding: 0px;
 }
 

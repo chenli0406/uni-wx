@@ -124,7 +124,7 @@
 		computed: {
 			// mescroll最小高度,默认windowHeight,使列表不满屏仍可下拉
 			minHeight(){
-				return this.toPx(this.height || '100%') + 'px'
+				return this.toPx(this.height || '30%') + 'px'
 			},
 			// 下拉布局往下偏移的距离 (px)
 			numTop() {

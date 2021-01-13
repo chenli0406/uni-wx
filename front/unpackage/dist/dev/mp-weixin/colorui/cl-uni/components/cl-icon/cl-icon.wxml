@@ -1,0 +1,1 @@
+<text class="{{['cl-icon','cl-icon-'+name2]}}" style="{{'font-size:'+($root.m0)+';'+('color:'+(color)+';')}}"></text>

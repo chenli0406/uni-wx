@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cl-loading": "/colorui/cl-uni/components/cl-loading/cl-loading"
+  },
+  "component": true
+}

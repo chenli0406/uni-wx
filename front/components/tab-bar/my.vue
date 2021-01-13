@@ -74,13 +74,21 @@
 		</view>
 		<!-- 设置 -->
 		<view class="cu-modal drawer-modal justify-end" :class="setModal== true?'show':''" @tap="hideModal">
-			<view class="cu-dialog basis-lg" @tap.stop="" style="height:100vh">
+			<view class="cu-dialog basis-lg bg-black" @tap.stop="" style="height:100vh">
 				<view class="cu-list menu text-left">
-					<view class="cu-item arrow" v-for="(item,index) in 5" :key="index">
+					<view class="avatar">
+							<view class="cu-avatar lg round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg);"></view>
+				      <view>
+							  <view style="padding: 6rpx;">昵称：<text>干饭人</text></view>
+								<view style="padding: 6rpx;">手机号：<text>12345678922</text></view>
+							</view>
+				   </view>
+					 
+					<view class="cu-item" v-for="(item,index) in 5" :key="index">
 						<view class="content">
 							<view>Item {{index +1}}</view>
 						</view>
-					</view>
+					</view> 
 				</view>
 			</view>
 		</view>
@@ -150,10 +158,20 @@
 	}
 	.cu-dialog{
 		width: 60%;
-		border-radius: 20rpx;
 		padding: 20rpx 0;
+		.cu-item{
+		  background-color: transparent;
+		}
 	}
 	.cu-bar .content{
 		width: auto;
+	}
+	.avatar{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 20rpx;
+		margin-bottom: 30rpx;
 	}
 </style>

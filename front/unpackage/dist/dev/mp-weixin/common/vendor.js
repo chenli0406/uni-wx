@@ -904,7 +904,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -1935,15 +1935,248 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 11:
-/*!********************************!*\
-  !*** E:/test-deom/apis/api.js ***!
-  \********************************/
+/***/ 106:
+/*!*******************************************************!*\
+  !*** E:/uni-wx/front/colorui/cl-uni/mixins/parent.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = exports.checkLogin = exports.getPresonId = exports.getPresonListPage = exports.addFeedback = exports.getDetails = exports.getMsgList = exports.getTabList = exports.getNavList = exports.getBanner = exports.ping = void 0;var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 12));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _utils = __webpack_require__(/*! ../utils */ 107);var _default =
+
+{
+  data: function data() {
+    return {
+      Parent: null };
+
+  },
+
+  computed: {
+    parent: function parent() {
+      return this.getParent() || this.Parent || {};
+    },
+
+    hasParent: function hasParent() {
+      return !(0, _utils.isEmpty)(this.parent);
+    } },
+
+
+  mounted: function mounted() {
+    this.Parent = this.getParent();
+  },
+
+  methods: {
+    getParent: function getParent() {
+      if (!this.ComponentName) {
+        return null;
+      }
+
+      return _utils.getParent.call(this, this.ComponentName, this.Keys);
+    } } };exports.default = _default;
+
+/***/ }),
+
+/***/ 107:
+/*!*****************************************************!*\
+  !*** E:/uni-wx/front/colorui/cl-uni/utils/index.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.isArray = isArray;exports.isObject = isObject;exports.isFunction = isFunction;exports.isString = isString;exports.isNull = isNull;exports.isBoolean = isBoolean;exports.isNumber = isNumber;exports.isPromise = isPromise;exports.isEmpty = isEmpty;exports.last = last;exports.compareValue = compareValue;exports.cloneDeep = cloneDeep;exports.deepMerge = deepMerge;exports.getCurrentPage = getCurrentPage;exports.parseRpx = parseRpx;exports.getParent = getParent;exports.getCurrentColor = getCurrentColor; // 是否Array类型
+function isArray(value) {
+  if (typeof Array.isArray === "function") {
+    return Array.isArray(value);
+  } else {
+    return Object.prototype.toString.call(value) === "[object Array]";
+  }
+}
+
+// 是否Object类型
+function isObject(value) {
+  return Object.prototype.toString.call(value) === "[object Object]";
+}
+
+// 是否Function类型
+function isFunction(value) {
+  return typeof value === "function";
+}
+
+// 是否String类型
+function isString(value) {
+  return typeof value === "string";
+}
+
+// 是否null类型
+function isNull(value) {
+  return !value && value !== 0;
+}
+
+// 是否Boolean类型
+function isBoolean(value) {
+  return typeof value === "boolean";
+}
+
+// 是否数字类型
+function isNumber(value) {
+  return typeof value === "number" && !isNaN(value);
+}
+
+// 是否Promise类型
+function isPromise(obj) {
+  obj !== null && (
+  typeof obj === "object" || typeof obj === "function") &&
+  typeof obj.then === "function";
+}
+
+// 是否为空
+function isEmpty(value) {
+  if (isArray(value)) {
+    return value.length === 0;
+  }
+
+  if (isObject(value)) {
+    return Object.keys(value).length === 0;
+  }
+
+  return value === "" || value === undefined || value === null;
+}
+
+// 取最后一个值
+function last(data) {
+  if (isArray(data) || isString(data)) {
+    return data[data.length - 1];
+  }
+}
+
+// 比较值
+function compareValue(a, b) {
+  return String(a) === String(b);
+}
+
+// 深拷贝
+function cloneDeep(v) {
+  if (isObject(v)) {
+    var d = {};
+
+    for (var k in v) {
+      if (v.hasOwnProperty && v.hasOwnProperty(k)) {
+        if (v[k] && typeof v[k] === "object") {
+          d[k] = cloneDeep(v[k]);
+        } else {
+          d[k] = v[k];
+        }
+      }
+    }
+
+    return d;
+  } else if (isArray(v)) {
+    return v.map(cloneDeep);
+  } else {
+    return v;
+  }
+}
+
+// 深度合并
+function deepMerge(a, b) {
+  var k;
+  for (k in b) {
+    a[k] =
+    a[k] && a[k].toString() === "[object Object]" ? deepMerge(a[k], b[k]) : a[k] = b[k];
+  }
+  return a;
+}
+
+// 获取当前页面信息
+function getCurrentPage() {var _last =
+  last(getCurrentPages()),route = _last.route,$page = _last.$page,options = _last.options,$route = _last.$route;
+
+  return {
+    path: "/".concat(route),
+    fullPath: $page.fullPath,
+
+    query: options };
+
+
+
+
+
+}
+
+/**
+   * 解析rpx
+   * @param {*} val 
+   */
+function parseRpx(val) {
+  return isArray(val) ? val.map(parseRpx).join(" ") : isNumber(val) ? val + "rpx" : val;
+}
+
+/**
+   * 获取父级节点
+   * @param {*} name componentName
+   * @param {*} keys 保留的参数，避免 computed 非 H5 解析失败
+   */
+function getParent(name, keys) {
+  var parent = this.$parent;
+
+  while (parent) {
+    if (parent.$options.componentName !== name) {
+      parent = parent.$parent;
+    } else {
+      return keys.reduce(function (result, key) {
+        result[key] = parent[key];
+        return result;
+      }, {});
+    }
+  }
+
+  return null;
+}
+
+/**
+   * 获取当前颜色
+   *
+   * @param {*} { color, max, value }
+   */
+function getCurrentColor(_ref) {var color = _ref.color,max = _ref.max,value = _ref.value;
+  if (isString(color)) {
+    return color;
+  } else {
+    var colorArray = color.
+    map(function (item, index) {
+      if (isString(item)) {
+        return {
+          color: item,
+          value: (index + 1) * (max / color.length) };
+
+      }
+      return item;
+    }).
+    sort(function (a, b) {return a.value - b.value;});
+
+    for (var i = 0; i < colorArray.length; i++) {
+      if (colorArray[i].value >= value) {
+        return colorArray[i].color;
+      }
+    }
+
+    return colorArray[colorArray.length - 1].color;
+  }
+}
+
+/***/ }),
+
+/***/ 11:
+/*!***********************************!*\
+  !*** E:/uni-wx/front/apis/api.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = exports.checkLogin = exports.saveGoodList = exports.getGoodList = exports.getPresonId = exports.getPresonListPage = exports.addFeedback = exports.getDetails = exports.getMsgList = exports.getTabList = exports.getNavList = exports.getBanner = exports.ping = void 0;var _request = _interopRequireDefault(__webpack_require__(/*! ./request.js */ 12));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 
 // ping
@@ -2020,8 +2253,24 @@ exports.getPresonListPage = getPresonListPage;var getPresonId = function getPres
     data: data });
 
 };
+// getGoodList
+exports.getPresonId = getPresonId;var getGoodList = function getGoodList(data) {
+  return _request.default.request({
+    url: '/users/getGoodList',
+    method: 'GET',
+    data: data });
+
+};
+// saveGoodList
+exports.getGoodList = getGoodList;var saveGoodList = function saveGoodList(data) {
+  return _request.default.request({
+    url: '/users/saveGoodList',
+    method: 'post',
+    data: data });
+
+};
 // 登录 
-exports.getPresonId = getPresonId;var checkLogin = function checkLogin(data) {
+exports.saveGoodList = saveGoodList;var checkLogin = function checkLogin(data) {
   return _request.default.request({
     url: "/login/checkLogin",
     method: 'post',
@@ -2038,14 +2287,16 @@ exports.getPresonId = getPresonId;var checkLogin = function checkLogin(data) {
   getDetails: getDetails,
   addFeedback: addFeedback,
   getPresonListPage: getPresonListPage,
-  getPresonId: getPresonId };exports.default = _default;
+  getPresonId: getPresonId,
+  getGoodList: getGoodList,
+  saveGoodList: saveGoodList };exports.default = _default;
 
 /***/ }),
 
 /***/ 12:
-/*!************************************!*\
-  !*** E:/test-deom/apis/request.js ***!
-  \************************************/
+/*!***************************************!*\
+  !*** E:/uni-wx/front/apis/request.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7770,7 +8021,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7791,14 +8042,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7884,7 +8135,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -8292,9 +8543,9 @@ internalMixin(Vue);
 /***/ }),
 
 /***/ 27:
-/*!*****************************************!*\
-  !*** E:/test-deom/static/img/phone.png ***!
-  \*****************************************/
+/*!********************************************!*\
+  !*** E:/uni-wx/front/static/img/phone.png ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8303,9 +8554,9 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAiCAYAAACw
 /***/ }),
 
 /***/ 28:
-/*!********************************************!*\
-  !*** E:/test-deom/static/img/password.png ***!
-  \********************************************/
+/*!***********************************************!*\
+  !*** E:/uni-wx/front/static/img/password.png ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8345,9 +8596,9 @@ module.exports = g;
 /***/ }),
 
 /***/ 37:
-/*!***********************************!*\
-  !*** E:/test-deom/common/util.js ***!
-  \***********************************/
+/*!**************************************!*\
+  !*** E:/uni-wx/front/common/util.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8427,9 +8678,9 @@ module.exports = {
 /***/ }),
 
 /***/ 4:
-/*!*******************************!*\
-  !*** E:/test-deom/pages.json ***!
-  \*******************************/
+/*!**********************************!*\
+  !*** E:/uni-wx/front/pages.json ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8438,9 +8689,9 @@ module.exports = {
 /***/ }),
 
 /***/ 53:
-/*!************************************************************!*\
-  !*** E:/test-deom/components/mescroll-uni/mescroll-uni.js ***!
-  \************************************************************/
+/*!***************************************************************!*\
+  !*** E:/uni-wx/front/components/mescroll-uni/mescroll-uni.js ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9249,9 +9500,9 @@ MeScroll.prototype.preventDefault = function (e) {
 /***/ }),
 
 /***/ 54:
-/*!*******************************************************************!*\
-  !*** E:/test-deom/components/mescroll-uni/mescroll-uni-option.js ***!
-  \*******************************************************************/
+/*!**********************************************************************!*\
+  !*** E:/uni-wx/front/components/mescroll-uni/mescroll-uni-option.js ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9296,9 +9547,9 @@ GlobalOption;exports.default = _default;
 /***/ }),
 
 /***/ 55:
-/*!**********************************************************!*\
-  !*** E:/test-deom/components/mescroll-uni/wxs/mixins.js ***!
-  \**********************************************************/
+/*!*************************************************************!*\
+  !*** E:/uni-wx/front/components/mescroll-uni/wxs/mixins.js ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9416,9 +9667,9 @@ WxsMixin;exports.default = _default;
 /***/ }),
 
 /***/ 70:
-/*!***************************************************************!*\
-  !*** E:/test-deom/components/mescroll-uni/mescroll-mixins.js ***!
-  \***************************************************************/
+/*!******************************************************************!*\
+  !*** E:/uni-wx/front/components/mescroll-uni/mescroll-mixins.js ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

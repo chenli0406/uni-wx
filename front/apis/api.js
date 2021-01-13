@@ -75,6 +75,22 @@ export const getPresonId = (data) => {
         data,
     })
 }
+// getGoodList
+export const getGoodList = (data) => {
+    return http.request({
+        url: '/users/getGoodList',
+        method: 'GET', 
+        data,
+    })
+}
+// saveGoodList
+export const saveGoodList = (data) => {
+    return http.request({
+        url: '/users/saveGoodList',
+        method: 'post', 
+        data:data,
+    })
+}
 // 登录 
 export const checkLogin = (data) => {
 	return http.request({
@@ -93,5 +109,7 @@ export default {
 		getDetails,
 		addFeedback,
 		getPresonListPage,
-		getPresonId
+		getPresonId,
+		getGoodList,
+		saveGoodList
 }

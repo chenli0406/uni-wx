@@ -187,4 +187,55 @@ router.get('/getPresonId', (req,res) => {
       res.send({ code:0,data});
   })
 })
+
+
+// good_list
+router.get('/getGoodList', (req,res) => {
+  let { currentPage, pageSize} = req.query;
+  // 查询语句sql
+  let sqlStr = `select * from good_list`;
+  //执行sql
+  connection.query(sqlStr,(err,data) => {
+     if(err) throw err;
+     // 计算总条数
+     let total = data.length;
+     // 计算跳过多少条
+     let n = (currentPage - 1)*pageSize;
+     // 拼接sql
+     sqlStr  += ` limit ${n}, ${pageSize}`;
+    // 执行sql
+    connection.query(sqlStr,(err,data) => { 
+      if(err) throw err;
+      //把总条数和页数对应的数据响应给前端
+      res.send({ code:0,total,data});
+    })
+  })
+})
+
+
+// good_list
+router.post('/saveGoodList', (req,res) => {
+  // 接受参数
+  let { id, zan} = req.body;
+  // 查询语句sql
+  let sqlStr = `update good_list set zan=${zan} where id= '${id}'`;
+  //执行sql
+	connection.query(sqlStr,(err,data)=>{
+		if(err) throw err;
+		if (data.affectedRows > 0) {
+			//响应成功的数据对象给前端
+			res.send({
+				code: 0,
+				msg: "成功",
+			})
+		} else {
+			//响应失败的数据对象给前端
+			res.send({
+				code: 1,
+				msg: "失败"
+			})
+		}
+	})
+})
+
 module.exports = router;
